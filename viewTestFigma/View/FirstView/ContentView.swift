@@ -11,15 +11,15 @@ struct ContentView: View {
     @AppStorage("isFirstPost") var isFirstPost: Bool = false
     var body: some View {
         VStack(spacing: 0) {
-            //Header
+            
             HeaderView()
                 .padding(.leading, 16)
                 .padding(.trailing, 16)
-           
-            // ChoiceView
+            
             ChoiceView()
+            
             Spacer()
-            //PostView
+            
             ScrollView(.vertical, showsIndicators: false) {
                 PostView(isFirstPost: true)
                 Divider()
@@ -29,8 +29,6 @@ struct ContentView: View {
             }
             CustomTabView()
             
-            
-            //TabView
         }
         
     }

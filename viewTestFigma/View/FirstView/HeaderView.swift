@@ -33,12 +33,10 @@ struct HeaderView: View {
             }
             
             
-           
             Text("Activities")
                 .font(.custom("Poppins-SemiBold", size: 16))
                 .padding(.leading, 51)
                 .padding(.trailing, 51)
-            
             
             
             ZStack {
@@ -46,7 +44,7 @@ struct HeaderView: View {
                     .resizable()
                     .scaledToFit()
                     .shadow(color: Color("ColorShadowPink"), radius: 0.4, x: 0, y: 2)
-                .frame(width: 53, height: 32, alignment: .center)
+                    .frame(width: 53, height: 32, alignment: .center)
                 HStack{
                     Image("Electric_Icon-v1")
                         .resizable()
@@ -56,16 +54,15 @@ struct HeaderView: View {
                         .font(.custom("Poppins-SemiBold", size: 13))
                 }.offset(y:1)
             }
-                
+            
             
             Image("Union")
                 .resizable()
                 .frame(width: 24, height: 24, alignment: .center)
                 .padding(.leading, 10)
                 .padding(.trailing, 4)
-
-                
-        }
+            
+        }//: HStack
         
     }
 }
@@ -75,6 +72,6 @@ struct Header_Previews: PreviewProvider {
         HeaderView()
             .previewLayout(.sizeThatFits)
             .frame(width: 343, height: 32)
-            
+        
     }
 }

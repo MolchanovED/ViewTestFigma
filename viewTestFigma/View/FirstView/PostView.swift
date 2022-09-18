@@ -10,7 +10,9 @@ import SwiftUI
 struct PostView: View {
     var isFirstPost: Bool
     var body: some View {
-        ScrollView(.vertical, showsIndicators: false){
+        
+        ScrollView(.vertical, showsIndicators: false) {
+            
             VStack(spacing: 0) {
                 PostHeader()
                 TaskDetails()
@@ -25,11 +27,7 @@ struct PostView: View {
                 Spacer()
                 
             }.padding(.top, 6)
-        }
-       
-        
-        
-        
+        }//: ScrollView
     }
 }
 

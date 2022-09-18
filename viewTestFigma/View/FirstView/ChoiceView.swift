@@ -36,7 +36,7 @@ struct ChoiceView: View {
                     .padding(.bottom,2.5)
             }
             
-        }
+        }//: Hstack
     }
 }
 

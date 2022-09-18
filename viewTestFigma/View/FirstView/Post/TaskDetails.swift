@@ -10,19 +10,20 @@ import SwiftUI
 struct TaskDetails: View {
     var body: some View {
         HStack {
+            
             // If you use spacing 104, in this case "taskname" will be transferred to another line
             //  There are 2 options for solving this problem: reducing the font, or reducing the spasing to 101
+            
             HStack(spacing: 101) {
                 HStack(spacing: 8){
                     Text("#taskname")
                         .font(.custom("Poppins-SemiBold", fixedSize: 13))
                         .lineLimit(1)
-                        
+                    
                     Text("@Nike")
                         .font(.custom("Poppins-SemiBold", fixedSize: 13))
                         .multilineTextAlignment(.leading)
                 }
-                //.frame(width: 130, height: 20)
                 HStack (spacing: 4){
                     ZStack {
                         Circle()
@@ -89,6 +90,6 @@ struct TaskDetails_Previews: PreviewProvider {
         TaskDetails()
             .previewLayout(.sizeThatFits)
             .frame(width: 375, height: 40)
-            
+        
     }
 }

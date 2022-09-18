@@ -15,12 +15,10 @@ struct FooterView: View {
                 .scaledToFit()
                 .frame(width: 32, height: 32)
                 .padding(.top, 32)
-               // .foregroundColor(Color.gray)
             Text("You’re all caught up")
                 .font(.custom("Poppins-SemiBold", size: 16))
                 .foregroundColor(Color("ColorGray"))
                 .padding(.bottom, 32)
-            
         }
     }
 }

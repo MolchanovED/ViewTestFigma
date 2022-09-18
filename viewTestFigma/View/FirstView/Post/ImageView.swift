@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ImageView: View {
     var body: some View {
+        
         ZStack {
             Image("Image")
                 .resizable()
@@ -37,10 +38,9 @@ struct ImageView: View {
                     
                 }
                 Spacer()
-            }
-            
-        }
-    }
+            }//: VStack
+        }//: Zstack
+    }//: View
 }
 
 struct ImageView_Previews: PreviewProvider {

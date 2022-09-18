@@ -56,9 +56,10 @@ struct FeedActionsView: View {
                     Spacer()
                 }// Re-send
                 .frame(width: 80, height: 24)
-            }
+                
+            }//: HStack
             .frame(width: 347, height: 24)
-        }
+        }//: Hstack
         .frame(width: 347, height: 56)
     }
 }

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct PostCommentView: View {
     var body: some View {
-       
+        
         VStack {
             HStack {
                 
@@ -24,16 +24,18 @@ struct PostCommentView: View {
                         .foregroundColor(Color("ColorGrayPost"))
                     
                     
-                }.frame(maxWidth: 343, maxHeight: .infinity, alignment: .topLeading)
-            }
+                }
+                .frame(maxWidth: 343, maxHeight: .infinity, alignment: .topLeading)
+            }//: HStack
             
-        
             HStack(alignment: .center) {
                 Text("Show 654 comments")
                     .font(.custom("Poppins-Medium", size: 11))
                     .foregroundColor(Color("ColorGrayPost"))
                     .padding(.top, 7)
-            }.frame(width: 375)
+            }
+            .frame(width: 375)
+            
         }//: VStack
     }
 }

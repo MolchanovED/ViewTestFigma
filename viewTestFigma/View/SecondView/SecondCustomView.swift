@@ -9,12 +9,28 @@ import SwiftUI
 
 struct SecondCustomView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack(spacing: 0) {
+            SecondHeaderView()
+            
+            Divider()
+            ScrollView(.vertical, showsIndicators: false) {
+                UserView()
+                FeedActionsView()
+                SecondPostCommentsView()
+                CommentsScrollView()
+                Divider()
+                SecondFooterView()
+            }
+            
+            Spacer()
+            
+        }//: VStack
     }
 }
 
 struct SecondCustomView_Previews: PreviewProvider {
     static var previews: some View {
         SecondCustomView()
+            .edgesIgnoringSafeArea(.bottom)
     }
 }

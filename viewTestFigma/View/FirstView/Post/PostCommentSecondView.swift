@@ -9,14 +9,15 @@ import SwiftUI
 
 struct PostCommentSecondView: View {
     var body: some View {
-       
+        
         VStack(spacing: 7) {
             VStack(alignment: .leading ,spacing: 8) {
                 HStack {
                     Text("Nike Q: Name one time in the last week you felt like giving up last week? ")
                         .font(.custom("Poppins-SemiBold", size: 13))
-                        
-                }.frame(minWidth: 343, minHeight: 43, alignment: .topLeading)
+                    
+                }
+                .frame(minWidth: 343, minHeight: 43, alignment: .topLeading)
                 
                 HStack {
                     HStack{
@@ -30,20 +31,18 @@ struct PostCommentSecondView: View {
                             .foregroundColor(Color("ColorGrayPost"))
                         
                         
-                    }.frame(maxWidth: 343, minHeight: 40, alignment: .topLeading)
-                }
+                    }
+                    .frame(maxWidth: 343, minHeight: 40, alignment: .topLeading)
+                }//: HStack
             }//: VStack
-                
             
-            
-        
             HStack(alignment: .center) {
                 Text("Show 654 comments")
                     .font(.custom("Poppins-Medium", size: 11))
                     .foregroundColor(Color("ColorGrayPost"))
                     .padding(.top, 7)
-
-            }.frame(width: 375)
+            }
+            .frame(width: 375)
         }//: VStack
     }
 }

@@ -8,18 +8,18 @@
 import SwiftUI
 
 struct CommentView: View {
-    let name: String
-    let image: String
-    let text: String
+    var user: String
+    var text: String
+    
     
     var body: some View {
         VStack(alignment: .leading,spacing: 8){
             HStack(alignment: .center, spacing: 8) {
-                Image(self.image)
+                Image("SecondUserImage")
                     .resizable()
                     .scaledToFit()
                     .frame(width: 28, height: 28)
-                Text(name)
+                Text(user)
                     .font(.custom("Poppins-Medium", size: 13))
                     .foregroundColor(Color("ColorGrayPost"))
                     .padding(.trailing,1)
@@ -36,51 +36,61 @@ struct CommentView: View {
                 Text(text)
                     .font(.custom("Poppins-Regular", size: 13))
                 Spacer()
-            }.frame(width: 343, height: 40)
+            }
+            .frame(maxWidth: .infinity, minHeight: 40)
             
-            HStack{
-                HStack(spacing: 4){
+            
+            HStack(alignment: .center, spacing: 0){
+                HStack(spacing: 0){
                     HStack(alignment: .center ,spacing: 0){
                         Image("thumbsRateUpDown")
                             .resizable()
-                            .modifier(ImageModifier())
+                            .frame(width: 16, height: 16)
+                        Spacer()
                         Text("192")
                             .font(.custom("Poppins-Medium", size: 11))
                         Spacer()
                         Image("btnDown")
                             .resizable()
-                            .modifier(ImageModifier())
-                            .padding(.trailing,19)
+                            .frame(width: 16, height: 16)
+                        
                     }//: Rate
-                    .frame(width: 95, height: 24)
+                    .frame(width: 70, height: 24)
+                    .padding(.trailing, 16)
                     
-                    
-                    HStack(alignment: .center, spacing: 8){
+                    HStack(alignment: .center){
                         Image("heartIcon32")
                             .resizable()
-                            .modifier(ImageModifier())
-                        Text("124")
-                            .font(.custom("Poppins-SemiBold", size: 13))
-                        Spacer()
+                            .frame(width: 16, height: 16)
+                        Text("192")
+                            .font(.custom("Poppins-Medium", size: 11))
                     }//: Heart
-                    .frame(width: 80, height: 24)
-                    
+                    .frame(minWidth: 39, maxHeight: 24)
+                    .padding(.trailing, 16)
                     
                     HStack(alignment: .center, spacing: 8) {
                         Image("ReplyIcon")
                             .resizable()
-                            .modifier(ImageModifier())
+                            .padding(.leading, 1.33)
+                            .padding(.trailing, 1.33)
+                            .padding(.top, 2.67)
+                            .padding(.bottom, 3.33)
+                            .frame(width: 16, height: 16)
                         Text("Reply")
-                            .font(.custom("Poppins-SemiBold", size: 13))
-                        Spacer()
+                            .font(.custom("Poppins-SemiBold", size: 11))
+                        
                     }// Re-send
-                   // .frame(width: 80, height: 24)
+                    .frame(width: 56, height: 17)
+                    
                 }
-                
+                .frame(width: 200, height: 24)
+                Spacer()
             }
+            .frame(minWidth: 266, maxHeight: 24)
             
-            Spacer()
-        }.frame(width: 343, height: 112)
+            
+        }//: Vstack
+        .frame(maxWidth: 343, maxHeight: 112)
         .padding(.top, 16)
         .padding(.bottom, 16)
     }
@@ -88,8 +98,8 @@ struct CommentView: View {
 
 struct CommentsView_Previews: PreviewProvider {
     static var previews: some View {
-        CommentView(name: "rabbitsfootvanilla", image: "SecondUserImage", text: "Name one time in the last week you felt like giving up last week? ")
+        CommentView(user: "rabbitsfootvanilla", text: "Name one time in the last week you felt like giving up last week? ")
             .previewLayout(.sizeThatFits)
-            .frame(width: 375, height: 112)
+            .frame(maxWidth: 375, minHeight: 112)
     }
 }
